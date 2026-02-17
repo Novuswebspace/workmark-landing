@@ -17,7 +17,7 @@ export default function FinalCTA() {
           ✦ FREE · NO CREDIT CARD · START TODAY
         </span>
 
-        <h2 className="font-display text-[48px] text-foreground leading-[1.0] mb-6 font-bold md:text-7xl">Start building your
+        <h2 className="font-display font-extrabold text-[48px] md:text-[76px] text-foreground leading-[1.0] mb-6">Start building your
 Workmark.
           <br />
           Start building your
