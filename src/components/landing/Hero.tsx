@@ -4,12 +4,12 @@ import FloatingBadge from "./FloatingBadge";
 
 const stagger = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
+  show: { transition: { staggerChildren: 0.08 } }
 };
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } }
 };
 
 export default function Hero() {
@@ -23,15 +23,15 @@ export default function Hero() {
         className="container relative z-10 flex flex-col items-center text-center max-w-[860px]"
         variants={stagger}
         initial="hidden"
-        animate="show"
-      >
+        animate="show">
+
         {/* Badge pill */}
         <motion.a
           href="#features"
           variants={fadeUp}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8"
-          style={{ background: "hsl(211 100% 61% / 0.08)" }}
-        >
+          style={{ background: "hsl(211 100% 61% / 0.08)" }}>
+
           <span className="text-primary">✦</span>
           <span className="font-mono text-xs text-primary">Introducing Zentro Workmark</span>
           <span className="text-primary">→</span>
@@ -40,8 +40,8 @@ export default function Hero() {
         {/* Headline */}
         <motion.h1
           variants={fadeUp}
-          className="font-display font-extrabold text-[44px] md:text-[80px] leading-[1.05] text-foreground mb-6"
-        >
+          className="font-display text-[44px] leading-[1.05] text-foreground mb-6 font-bold md:text-8xl">
+
           Your Work Speaks
           <br />
           Louder Than Your{" "}
@@ -53,8 +53,8 @@ export default function Hero() {
         {/* Sub-headline */}
         <motion.p
           variants={fadeUp}
-          className="font-body text-text-secondary text-lg md:text-[19px] max-w-[580px] leading-[1.75] mb-8"
-        >
+          className="font-body text-text-secondary text-lg md:text-[19px] max-w-[580px] leading-[1.75] mb-8">
+
           Zentro Workmark connects students with real challenges, AI&#8209;powered feedback, and a verified proof&#8209;of&#8209;work trail that goes far beyond any resume. Built for every student. For every discipline.
         </motion.p>
 
@@ -76,8 +76,8 @@ export default function Hero() {
         {/* Platform mockup */}
         <motion.div
           variants={fadeUp}
-          className="relative w-full max-w-[1000px]"
-        >
+          className="relative w-full max-w-[1000px]">
+
           <div className="rounded-2xl border border-primary/[0.15] overflow-hidden shadow-[0_40px_140px_hsl(211_100%_61%/0.14),0_0_0_1px_hsl(211_100%_61%/0.08)]">
             {/* Chrome bar */}
             <div className="h-9 flex items-center gap-2 px-4" style={{ background: "hsl(220 35% 8%)" }}>
@@ -109,6 +109,6 @@ export default function Hero() {
           </FloatingBadge>
         </motion.div>
       </motion.div>
-    </section>
-  );
+    </section>);
+
 }
