@@ -11,8 +11,7 @@ export default function FinalCTA() {
       <div ref={ref} className="container relative z-10 flex flex-col items-center text-center max-w-[700px] [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         {/* Badge */}
         <span
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8 font-mono text-xs text-primary"
-          style={{ background: "hsl(211 100% 61% / 0.08)" }}>
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8 font-mono text-xs text-primary bg-primary/[0.08]">
 
           ✦ FREE · NO CREDIT CARD · START TODAY
         </span>
