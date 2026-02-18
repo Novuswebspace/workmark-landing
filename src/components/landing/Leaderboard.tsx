@@ -12,7 +12,7 @@ export default function Leaderboard() {
   const ref = useScrollReveal();
 
   return (
-    <section id="leaderboard" className="relative section-padding" style={{ background: "hsl(222 30% 7%)" }}>
+    <section id="leaderboard" className="relative section-padding bg-surface-1">
       <div className="absolute inset-0 glow-amber pointer-events-none" />
       <div ref={ref} className="container relative z-10 [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         <div className="text-center mb-16">

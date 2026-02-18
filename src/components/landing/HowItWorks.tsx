@@ -86,7 +86,7 @@ export default function HowItWorks() {
   const ref = useScrollReveal();
 
   return (
-    <section id="how-it-works" className="relative section-padding" style={{ background: "hsl(222 30% 7%)" }}>
+    <section id="how-it-works" className="relative section-padding bg-surface-1">
       <div ref={ref} className="container relative z-10 [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         <div className="text-center mb-16">
           <span className="eyebrow text-primary mb-4 block">THE JOURNEY</span>

@@ -175,8 +175,8 @@
   /* Grid background */
   .grid-bg {
     background-image:
-      linear-gradient(rgba(59,158,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59,158,255,0.025) 1px, transparent 1px);
+      linear-gradient(hsl(var(--primary) / 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.025) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
@@ -188,8 +188,8 @@
   }
 
   .zentro-card:hover {
-    border-color: hsl(211 100% 61% / 0.38);
-    box-shadow: 0 20px 60px hsl(211 100% 61% / 0.10);
+    border-color: hsl(var(--primary) / 0.38);
+    box-shadow: 0 20px 60px hsl(var(--primary) / 0.10);
     transform: translateY(-4px);
   }
 
@@ -222,24 +222,46 @@
 
   /* Glow orbs */
   .glow-blue {
-    background: radial-gradient(ellipse 900px 700px at 50% 40%, hsl(211 100% 61% / 0.12), transparent 70%);
+    background: radial-gradient(ellipse 900px 700px at 50% 40%, hsl(var(--primary) / 0.12), transparent 70%);
   }
 
   .glow-cyan {
-    background: radial-gradient(ellipse 600px 500px at 60% 60%, hsl(187 82% 53% / 0.07), transparent 70%);
+    background: radial-gradient(ellipse 600px 500px at 60% 60%, hsl(var(--accent) / 0.07), transparent 70%);
   }
 
   .glow-red {
-    background: radial-gradient(ellipse 700px 600px at 50% 50%, hsl(0 84% 60% / 0.06), transparent 70%);
+    background: radial-gradient(ellipse 700px 600px at 50% 50%, hsl(var(--destructive) / 0.06), transparent 70%);
   }
 
   .glow-amber {
-    background: radial-gradient(ellipse 800px 600px at 50% 50%, hsl(43 96% 56% / 0.06), transparent 70%);
+    background: radial-gradient(ellipse 800px 600px at 50% 50%, hsl(var(--warning) / 0.06), transparent 70%);
   }
 
   .glow-intense {
-    background: radial-gradient(ellipse 1000px 800px at 50% 50%, hsl(211 100% 61% / 0.20), transparent 60%),
-                radial-gradient(ellipse 1400px 1000px at 50% 50%, hsl(187 82% 53% / 0.07), transparent 60%);
+    background: radial-gradient(ellipse 1000px 800px at 50% 50%, hsl(var(--primary) / 0.20), transparent 60%),
+                radial-gradient(ellipse 1400px 1000px at 50% 50%, hsl(var(--accent) / 0.07), transparent 60%);
+  }
+
+  /* Light mode: tone down atmospheric effects */
+  .light .glow-blue,
+  .light .glow-cyan,
+  .light .glow-red,
+  .light .glow-amber {
+    opacity: 0.5;
+  }
+
+  .light .glow-intense {
+    opacity: 0.3;
+  }
+
+  .light .grain-overlay::before {
+    opacity: 0.015;
+  }
+
+  .light .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.04) 1px, transparent 1px);
   }
 
   /* Float animation */
@@ -274,7 +296,7 @@
     left: 0;
     top: 50%;
     height: 3px;
-    background: hsl(0 84% 60%);
+    background: hsl(var(--destructive));
     animation: strikethrough 0.7s ease-out 1.2s forwards;
     width: 0;
   }
@@ -286,7 +308,7 @@
   }
 
   .animate-shimmer {
-    background: linear-gradient(90deg, transparent 0%, hsl(211 100% 61% / 0.15) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, hsl(var(--primary) / 0.15) 50%, transparent 100%);
     background-size: 200% 100%;
     animation: shimmer 3s ease-in-out infinite;
   }

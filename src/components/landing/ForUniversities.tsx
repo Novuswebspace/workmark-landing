@@ -4,7 +4,7 @@ export default function ForUniversities() {
   const ref = useScrollReveal();
 
   return (
-    <section id="for-universities" className="relative section-padding" style={{ background: "hsl(222 30% 7%)" }}>
+    <section id="for-universities" className="relative section-padding bg-surface-1">
       <div ref={ref} className="container relative z-10 [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         <div className="zentro-card zentro-card-accent p-8 md:p-12 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-center">

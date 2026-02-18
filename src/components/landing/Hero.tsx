@@ -29,8 +29,7 @@ export default function Hero() {
         <motion.a
           href="#features"
           variants={fadeUp}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8"
-          style={{ background: "hsl(211 100% 61% / 0.08)" }}>
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8 bg-primary/[0.08]">
 
           <span className="text-primary">✦</span>
           <span className="font-mono text-xs text-primary">Introducing Zentro Workmark</span>
@@ -80,11 +79,11 @@ export default function Hero() {
 
           <div className="rounded-2xl border border-primary/[0.15] overflow-hidden shadow-[0_40px_140px_hsl(211_100%_61%/0.14),0_0_0_1px_hsl(211_100%_61%/0.08)]">
             {/* Chrome bar */}
-            <div className="h-9 flex items-center gap-2 px-4" style={{ background: "hsl(220 35% 8%)" }}>
+            <div className="h-9 flex items-center gap-2 px-4 bg-card">
               <div className="w-3 h-3 rounded-full bg-destructive/60" />
               <div className="w-3 h-3 rounded-full bg-warning/60" />
               <div className="w-3 h-3 rounded-full bg-success/60" />
-              <div className="flex-1 mx-8 h-5 rounded-md" style={{ background: "hsl(220 30% 14%)" }} />
+              <div className="flex-1 mx-8 h-5 rounded-md bg-muted" />
             </div>
             <img src={platformMockup} alt="Zentro Workmark Platform Dashboard" className="w-full" />
           </div>

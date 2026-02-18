@@ -5,7 +5,7 @@ export default function Problem() {
   const ref = useScrollReveal();
 
   return (
-    <section className="relative section-padding overflow-hidden" style={{ background: "hsl(222 30% 7%)" }}>
+    <section className="relative section-padding overflow-hidden bg-surface-1">
       <div className="absolute inset-0 glow-red pointer-events-none" />
       <div
         ref={ref}
@@ -24,7 +24,7 @@ export default function Problem() {
           </p>
           <div className="flex flex-wrap gap-3">
             {["❌ Resume = 1 page", "❌ Grades don't show capability", "❌ Projects disappear after submission"].map((chip) => (
-              <span key={chip} className="px-3 py-1.5 rounded-full text-xs font-body text-destructive border border-destructive/20" style={{ background: "hsl(0 84% 60% / 0.06)" }}>
+              <span key={chip} className="px-3 py-1.5 rounded-full text-xs font-body text-destructive border border-destructive/20 bg-destructive/[0.06]">
                 {chip}
               </span>
             ))}
@@ -55,7 +55,7 @@ export default function Problem() {
             </div>
 
             {/* Workmark side */}
-            <div className="space-y-3" style={{ background: "hsl(211 100% 61% / 0.03)" }}>
+            <div className="space-y-3 bg-primary/[0.03]">
               <p className="font-mono text-[10px] text-primary uppercase tracking-wider">✦ Workmark</p>
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display font-bold text-primary text-sm">SK</div>
               <p className="text-sm text-foreground font-medium">Sambram K S</p>
