@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/zentro_monogram removebg.png" alt="Zentro Workmark" className="h-14 -mr-4" />
+              <img src={`${import.meta.env.BASE_URL}zentro_monogram removebg.png`} alt="Zentro Workmark" className="h-14 -mr-4" />
               <span className="font-display font-bold text-foreground">Zentro<span className="text-primary"> Workmark</span></span>
             </div>
             <p className="font-body text-text-muted text-sm mb-4">The innovation ecosystem for every student.</p>

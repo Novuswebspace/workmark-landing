@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/zentro_monogram removebg.png" alt="Zentro Workmark" className="w-14 h-14 -mr-4" />
+          <img src={`${import.meta.env.BASE_URL}zentro_monogram removebg.png`} alt="Zentro Workmark" className="w-14 h-14 -mr-4" />
           <span className="font-display font-bold text-foreground text-lg">
             Zentro<span className="text-primary"> Workmark</span>
           </span>

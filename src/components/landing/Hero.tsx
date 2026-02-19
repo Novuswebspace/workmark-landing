@@ -89,7 +89,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <img src="/mockup.png" alt="Zentro Workmark Platform Dashboard" className="w-full" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}mockup.png`} alt="Zentro Workmark Platform Dashboard" className="w-full" loading="lazy" />
           </div>
         </motion.div>
       </motion.div>
