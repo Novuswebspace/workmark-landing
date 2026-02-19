@@ -4,7 +4,6 @@ import SocialProof from "@/components/landing/SocialProof";
 import Problem from "@/components/landing/Problem";
 import BentoGrid from "@/components/landing/BentoGrid";
 import HowItWorks from "@/components/landing/HowItWorks";
-import ProfileShowcase from "@/components/landing/ProfileShowcase";
 import ActivityFeed from "@/components/landing/ActivityFeed";
 import Benefits from "@/components/landing/Benefits";
 import Testimonials from "@/components/landing/Testimonials";
@@ -21,7 +20,6 @@ const Index = () => {
       <Problem />
       <BentoGrid />
       <HowItWorks />
-      <ProfileShowcase />
       <ActivityFeed />
       <Benefits />
       <Testimonials />
