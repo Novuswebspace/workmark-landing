@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import platformMockup from "@/assets/platform-mockup.png";
-import FloatingBadge from "./FloatingBadge";
+import { GradientButton } from "@/components/ui/gradient-button";
 
 const stagger = {
   hidden: {},
@@ -39,9 +38,9 @@ export default function Hero() {
         {/* Headline */}
         <motion.h1
           variants={fadeUp}
-          className="font-display text-[44px] leading-[1.05] text-foreground mb-6 font-bold md:text-8xl">
+          className="font-display text-[40px] leading-[1.05] text-foreground mb-6 font-bold md:text-6xl">
 
-          Your Work Speaks
+          Your Workmark Speaks
           <br />
           Louder Than Your{" "}
           <span className="relative inline-block">
@@ -54,17 +53,16 @@ export default function Hero() {
           variants={fadeUp}
           className="font-body text-text-secondary text-lg md:text-[19px] max-w-[580px] leading-[1.75] mb-8">
 
-          Zentro Workmark connects students with real challenges, AI&#8209;powered feedback, and a verified proof&#8209;of&#8209;work trail that goes far beyond any resume. Built for every student. For every discipline.
+          Zentro Workmark is the innovation ecosystem for students — connecting
+          you to real challenges, expert feedback, and a verified proof-of-work
+          that recruiters and industry leaders actually value.
         </motion.p>
 
         {/* CTA row */}
-        <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3.5 mb-6 w-full sm:w-auto">
-          <button className="px-7 py-3.5 font-display font-semibold text-[15px] text-primary-foreground bg-primary rounded-[10px] hover:shadow-[0_0_24px_hsl(211_100%_61%/0.5)] hover:scale-[1.02] transition-all">
+        <motion.div variants={fadeUp} className="flex justify-center mb-6">
+          <GradientButton className="px-7 py-3.5 font-display font-semibold text-[15px] rounded-[10px]">
             Start Building Your Workmark →
-          </button>
-          <button className="px-7 py-3.5 font-body font-medium text-[15px] text-text-secondary border border-foreground/[0.12] rounded-[10px] hover:border-foreground/25 hover:text-foreground transition-all">
-            See How It Works
-          </button>
+          </GradientButton>
         </motion.div>
 
         {/* Trust line */}
@@ -75,39 +73,26 @@ export default function Hero() {
         {/* Platform mockup */}
         <motion.div
           variants={fadeUp}
-          className="relative w-full max-w-[1000px]">
+          className="relative w-full max-w-[1100px]">
 
-          <div className="rounded-2xl border border-primary/[0.15] overflow-hidden shadow-[0_40px_140px_hsl(211_100%_61%/0.14),0_0_0_1px_hsl(211_100%_61%/0.08)]">
-            {/* Chrome bar */}
-            <div className="h-9 flex items-center gap-2 px-4 bg-card">
-              <div className="w-3 h-3 rounded-full bg-destructive/60" />
-              <div className="w-3 h-3 rounded-full bg-warning/60" />
-              <div className="w-3 h-3 rounded-full bg-success/60" />
-              <div className="flex-1 mx-8 h-5 rounded-md bg-muted" />
+          <div className="relative rounded-xl border border-primary/15 overflow-hidden shadow-[0_40px_120px_hsl(213_100%_62%/0.15)]">
+            {/* Browser chrome */}
+            <div className="bg-secondary/80 px-4 py-2.5 flex items-center gap-2 border-b border-primary/10">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-muted/30" />
+                <div className="w-3 h-3 rounded-full bg-muted/30" />
+                <div className="w-3 h-3 rounded-full bg-muted/30" />
+              </div>
+              <div className="flex-1 mx-8">
+                <div className="bg-background/50 rounded-md px-3 py-1 text-xs text-muted-foreground font-mono text-center max-w-xs mx-auto">
+                  workmark.zentrosuite.com
+                </div>
+              </div>
             </div>
-            <img src={platformMockup} alt="Zentro Workmark Platform Dashboard" className="w-full" />
+            <img src="/mockup.png" alt="Zentro Workmark Platform Dashboard" className="w-full" loading="lazy" />
           </div>
-
-          {/* Floating badges */}
-          <FloatingBadge className="-top-4 -left-8" animationClass="animate-float">
-            <p className="text-xs text-text-muted mb-1">⚡ Innovation Score</p>
-            <p className="font-mono text-[28px] text-accent font-bold leading-none">847</p>
-            <p className="text-xs text-success mt-1">↑ +14 this week</p>
-          </FloatingBadge>
-
-          <FloatingBadge className="-top-4 -right-8" animationClass="animate-float-delayed-1">
-            <p className="text-xs text-text-muted mb-1">🏆 Leaderboard</p>
-            <p className="font-mono text-sm text-foreground font-bold">Rank #3 of peers</p>
-            <p className="text-xs text-success mt-1">↑ Up 5 spots this week</p>
-          </FloatingBadge>
-
-          <FloatingBadge className="bottom-12 left-1/2 -translate-x-1/2" animationClass="animate-float-delayed-2">
-            <p className="text-xs text-text-muted mb-1">👁 Eyes on Your Work</p>
-            <p className="font-mono text-sm text-foreground font-bold">49 views this week</p>
-            <p className="text-xs text-text-secondary">IntelliCampus Project</p>
-          </FloatingBadge>
         </motion.div>
       </motion.div>
-    </section>);
-
+    </section>
+  );
 }

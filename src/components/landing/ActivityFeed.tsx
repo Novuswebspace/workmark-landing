@@ -25,9 +25,9 @@ export default function ActivityFeed() {
             {/* Post 1 */}
             <GlowCard className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-xs font-bold">SK</div>
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-xs font-bold">V</div>
                 <div>
-                  <p className="text-foreground text-sm font-medium">Sambram K S</p>
+                  <p className="text-foreground text-sm font-medium">Vikram</p>
                   <p className="text-text-muted text-xs">Computer Science · 4th Year · 2h ago</p>
                 </div>
               </div>

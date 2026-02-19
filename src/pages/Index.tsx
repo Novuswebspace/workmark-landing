@@ -5,7 +5,6 @@ import Problem from "@/components/landing/Problem";
 import BentoGrid from "@/components/landing/BentoGrid";
 import HowItWorks from "@/components/landing/HowItWorks";
 import ProfileShowcase from "@/components/landing/ProfileShowcase";
-import Leaderboard from "@/components/landing/Leaderboard";
 import ActivityFeed from "@/components/landing/ActivityFeed";
 import Benefits from "@/components/landing/Benefits";
 import Testimonials from "@/components/landing/Testimonials";
@@ -23,7 +22,6 @@ const Index = () => {
       <BentoGrid />
       <HowItWorks />
       <ProfileShowcase />
-      <Leaderboard />
       <ActivityFeed />
       <Benefits />
       <Testimonials />

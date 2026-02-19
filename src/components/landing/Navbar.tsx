@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = ["Platform", "Features", "How It Works", "Leaderboard", "For Universities"];
+const navLinks = ["Features", "How It Works", "For Universities"];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,9 +24,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-display font-bold text-primary-foreground text-sm">
-            Z
-          </div>
+          <img src="/zentro_monogram removebg.png" alt="Zentro Workmark" className="w-14 h-14 -mr-4" />
           <span className="font-display font-bold text-foreground text-lg">
             Zentro<span className="text-primary"> Workmark</span>
           </span>

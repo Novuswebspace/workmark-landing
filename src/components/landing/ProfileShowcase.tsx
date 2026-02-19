@@ -3,13 +3,14 @@ import { useScrollReveal } from "./useScrollReveal";
 import { useCountUp } from "./useCountUp";
 import { motion, AnimatePresence } from "framer-motion";
 import GlowCard from "./GlowCard";
+import { Zap, TrendingUp, Calendar, Award, FileCheck } from "lucide-react";
 
 const tabs = [
-  { label: "⚡ Innovation Score", key: "score" },
-  { label: "📈 Industry Readiness", key: "readiness" },
-  { label: "📅 Proof Timeline", key: "timeline" },
-  { label: "🏅 Endorsements", key: "endorsements" },
-  { label: "📁 Certifications", key: "certs" },
+  { label: "Innovation Score", key: "score", icon: Zap },
+  { label: "Industry Readiness", key: "readiness", icon: TrendingUp },
+  { label: "Proof Timeline", key: "timeline", icon: Calendar },
+  { label: "Endorsements", key: "endorsements", icon: Award },
+  { label: "Certifications", key: "certs", icon: FileCheck },
 ];
 
 function ScoreTab() {
@@ -137,20 +138,24 @@ export default function ProfileShowcase() {
 
         <GlowCard className="p-6 md:p-10 max-w-3xl mx-auto">
           {/* Tab bar */}
-          <div className="flex gap-2 overflow-x-auto pb-4 mb-6 scrollbar-hide">
-            {tabs.map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => setActive(tab.key)}
-                className={`px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap transition-all ${
-                  active === tab.key
-                    ? "bg-primary/20 text-primary border border-primary/30"
-                    : "text-text-muted hover:text-text-secondary border border-transparent"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+          <div className="flex gap-2 overflow-x-auto pb-4 mb-6 -mx-2 px-2" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.key}
+                  onClick={() => setActive(tab.key)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap transition-all ${
+                    active === tab.key
+                      ? "bg-primary/20 text-primary border border-primary/30"
+                      : "text-text-muted hover:text-text-secondary border border-transparent"
+                  }`}
+                >
+                  <Icon size={14} />
+                  {tab.label}
+                </button>
+              );
+            })}
           </div>
 
           {/* Tab content */}

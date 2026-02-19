@@ -121,9 +121,9 @@ function LeaderboardMiniVisual() {
 function ProfileMiniVisual() {
   return (
     <div className="flex items-center gap-3 mt-3">
-      <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-xs font-bold">SK</div>
+      <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-xs font-bold">V</div>
       <div>
-        <p className="text-foreground text-sm font-medium">Sambram K S</p>
+        <p className="text-foreground text-sm font-medium">Vikram</p>
         <p className="font-mono text-accent text-xs">⚡ Score: 847</p>
       </div>
       <div className="ml-auto flex gap-1">

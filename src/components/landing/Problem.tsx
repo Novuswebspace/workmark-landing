@@ -1,76 +1,109 @@
-import { motion } from "framer-motion";
-import { useScrollReveal } from "./useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import GlowCard from "./GlowCard";
 
 export default function Problem() {
-  const ref = useScrollReveal();
+  const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="relative section-padding overflow-hidden bg-surface-1">
-      <div className="absolute inset-0 glow-red pointer-events-none" />
-      <div
-        ref={ref}
-        className="container relative z-10 grid md:grid-cols-2 gap-12 items-center [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]"
-      >
-        {/* Left copy */}
-        <div>
-          <span className="eyebrow text-destructive mb-4 block">THE PROBLEM</span>
-          <h2 className="font-display font-bold text-4xl md:text-[48px] text-foreground leading-[1.1] mb-6">
-            You've done the work.
+    <section ref={ref} className="py-28 md:py-36 px-6">
+      <div className="mx-auto max-w-[1200px] grid md:grid-cols-2 gap-16 items-center">
+        {/* Left: Copy */}
+        <div
+          className={`transition-all duration-600 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
+          <span className="font-mono text-xs text-primary uppercase tracking-[0.12em] mb-4 block">
+            The Problem
+          </span>
+          <h2 className="font-display font-bold text-3xl md:text-5xl text-foreground leading-tight mb-6">
+            A resume is a piece of paper.
             <br />
-            The resume hasn't caught up.
+            Your work is real.
           </h2>
-          <p className="font-body text-text-secondary text-lg leading-[1.8] mb-6">
-            You've built projects at 2am. You've cracked problems nobody asked you to crack. You've won arguments in seminars and built things that actually worked. But when you sit in front of a recruiter — all of that becomes a single bullet point on a one-page PDF. That's not your story. Zentro Workmark is.
+          <p className="font-body text-lg text-text-secondary leading-relaxed">
+            You've built projects, cracked problems, ideated solutions, stayed
+            up at 3am debugging something nobody asked you to debug — but when
+            you sit in front of a recruiter, all you have is a 1-page PDF.
+            Zentro Workmark changes that.
           </p>
-          <div className="flex flex-wrap gap-3">
-            {["❌ Resume = 1 page", "❌ Grades don't show capability", "❌ Projects disappear after submission"].map((chip) => (
-              <span key={chip} className="px-3 py-1.5 rounded-full text-xs font-body text-destructive border border-destructive/20 bg-destructive/[0.06]">
-                {chip}
-              </span>
-            ))}
-          </div>
         </div>
 
-        {/* Right comparison card */}
-        <GlowCard className="p-8 border-destructive/[0.12]">
-          <div className="grid grid-cols-[1fr_auto_1fr] gap-6">
-            {/* Resume side */}
-            <div className="space-y-3 opacity-50">
-              <p className="font-mono text-[10px] text-text-muted uppercase tracking-wider">📄 Resume</p>
-              <div className="space-y-2">
-                {[80, 60, 90, 50, 70, 40].map((w, i) => (
-                  <div key={i} className="h-2.5 rounded bg-foreground/[0.06] animate-pulse" style={{ width: `${w}%` }} />
-                ))}
+        {/* Right: Comparison Card */}
+        <GlowCard
+          className={`transition-all duration-600 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
+          <div className="p-6 md:p-8">
+            <div className="grid grid-cols-2 gap-6">
+              {/* Resume side */}
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-display font-semibold text-sm text-text-secondary">
+                    Resume
+                  </span>
+                  <span className="text-destructive text-sm">✕</span>
+                </div>
+                <div className="space-y-3">
+                  <div className="h-3 w-full rounded bg-muted/20" />
+                  <div className="h-3 w-4/5 rounded bg-muted/15" />
+                  <div className="h-3 w-3/5 rounded bg-muted/10" />
+                  <div className="h-3 w-full rounded bg-muted/15" />
+                  <div className="h-3 w-2/3 rounded bg-muted/10" />
+                  <div className="h-8 w-full rounded bg-muted/10 mt-4" />
+                  <div className="h-3 w-4/5 rounded bg-muted/15" />
+                  <div className="h-3 w-3/5 rounded bg-muted/10" />
+                </div>
               </div>
-              <div className="text-destructive/30 text-6xl font-bold text-center mt-4">✕</div>
-            </div>
 
-            {/* Divider */}
-            <div className="flex flex-col items-center">
-              <div className="flex-1 w-px bg-foreground/[0.08]" />
-              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center my-2">
-                <span className="text-primary text-sm">→</span>
-              </div>
-              <div className="flex-1 w-px bg-foreground/[0.08]" />
-            </div>
+              {/* Divider */}
+              <div className="relative">
+                <div className="absolute -left-3 top-0 bottom-0 w-px bg-primary/20" />
+                <div className="absolute -left-3 top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs">
+                  →
+                </div>
 
-            {/* Workmark side */}
-            <div className="space-y-3 bg-primary/[0.03]">
-              <p className="font-mono text-[10px] text-primary uppercase tracking-wider">✦ Workmark</p>
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display font-bold text-primary text-sm">SK</div>
-              <p className="text-sm text-foreground font-medium">Sambram K S</p>
-              <p className="font-mono text-accent text-lg">⚡ Score: 847</p>
-              <div className="w-full h-2 rounded-full bg-foreground/[0.06] overflow-hidden">
-                <div className="h-full bg-success rounded-full" style={{ width: "78%" }} />
+                {/* Workmark side */}
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-display font-semibold text-sm text-foreground">
+                      Workmark
+                    </span>
+                    <span className="text-xs text-primary font-mono">Verified</span>
+                  </div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/20" />
+                    <div>
+                      <div className="text-sm font-medium text-foreground">Student Name</div>
+                      <div className="text-xs text-text-secondary">CS, VIT Vellore</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs">
+                      <span className="text-text-secondary">Innovation Score</span>
+                      <span className="font-mono text-accent font-bold">847</span>
+                    </div>
+                    <div className="flex justify-between text-xs">
+                      <span className="text-text-secondary">Industry Readiness</span>
+                      <span className="font-mono text-success font-bold">78%</span>
+                    </div>
+                    <div className="w-full bg-muted/20 rounded-full h-1.5 mt-1">
+                      <div className="bg-success h-1.5 rounded-full w-[78%]" />
+                    </div>
+                    <div className="flex flex-wrap gap-1.5 mt-3">
+                      {["Finalist", "3 Challenges", "12 Projects"].map((t) => (
+                        <span
+                          key={t}
+                          className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="text-xs text-text-muted">Industry Readiness: 78%</p>
-              <div className="flex flex-wrap gap-1.5">
-                {["🥇 Finalist", "12 Projects", "3 Certs"].map((t) => (
-                  <span key={t} className="px-2 py-0.5 rounded text-[10px] font-mono text-primary border border-primary/20">{t}</span>
-                ))}
-              </div>
-              <span className="inline-flex items-center gap-1 text-xs text-primary">✓ Verified</span>
             </div>
           </div>
         </GlowCard>

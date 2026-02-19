@@ -16,9 +16,7 @@ export default function FinalCTA() {
           ✦ FREE · NO CREDIT CARD · START TODAY
         </span>
 
-        <h2 className="font-display font-extrabold text-[48px] md:text-[76px] text-foreground leading-[1.0] mb-6">Start building your
-Workmark.
-          <br />
+        <h2 className="font-display font-extrabold text-[48px] md:text-[76px] text-foreground leading-[1.0] mb-6">
           Start building your
           <br />
           <span className="text-primary" style={{ textShadow: "0 0 40px hsl(211 100% 61% / 0.4)" }}>
