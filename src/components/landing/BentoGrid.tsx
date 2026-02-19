@@ -74,7 +74,7 @@ function ScoreVisual() {
     <div className="text-center py-4">
       <span ref={ref} className="font-mono text-[56px] text-foreground font-bold leading-none">{count}</span>
       <p className="text-text-muted text-[11px] font-mono mt-2">Innovation Score</p>
-      <p className="text-success text-[13px] mt-1">↑ +14 points this week</p>
+      <p className="text-success text-[13px] mt-1">+14 points this week</p>
       <div className="flex justify-center gap-1 mt-4">
         {[30, 45, 55, 70, 85].map((h, i) => (
           <div key={i} className="w-4 rounded-sm bg-foreground/30" style={{ height: `${h}%`, minHeight: `${h * 0.6}px` }} />
@@ -90,13 +90,13 @@ function ChallengeVisual() {
       <p className="text-foreground text-sm font-medium mb-2">Smart Campus Energy Challenge</p>
       <div className="flex flex-wrap gap-2 mb-3">
         <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-warning/10 text-warning border border-warning/20">₹50,000</span>
-        <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-destructive/10 text-destructive border border-destructive/20">⏱ 3 days remaining</span>
+        <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-destructive/10 text-destructive border border-destructive/20">3 days remaining</span>
       </div>
-      <p className="text-xs text-text-muted mb-3">🟢 Active · 143 participants</p>
-      <button className="w-full py-2 text-xs font-display font-semibold text-primary-foreground bg-primary rounded-lg">Submit Idea →</button>
+      <p className="text-xs text-text-muted mb-3">Active · 143 participants</p>
+      <button className="w-full py-2 text-xs font-display font-semibold text-primary-foreground bg-primary rounded-lg">Submit Idea</button>
       <div className="flex gap-2 mt-3">
         {[["Active", "bg-success/10 text-success"], ["Upcoming", "bg-warning/10 text-warning"], ["AI-Recommended", "bg-violet/10 text-violet"]].map(([label, cls]) => (
-          <span key={label} className={`px-2 py-0.5 rounded text-[9px] font-mono ${cls}`}>● {label}</span>
+          <span key={label} className={`px-2 py-0.5 rounded text-[9px] font-mono ${cls}`}>{label}</span>
         ))}
       </div>
     </div>
@@ -106,14 +106,14 @@ function ChallengeVisual() {
 function LeaderboardMiniVisual() {
   return (
     <div className="space-y-2 mt-2">
-      {[["🥇", "Riya M.", "1,240"], ["🥈", "Arjun K.", "1,180"], ["▶", "You", "847"]].map(([badge, name, pts], i) => (
+      {[["1", "Riya M.", "1,240"], ["2", "Arjun K.", "1,180"], ["4", "You", "847"]].map(([badge, name, pts], i) => (
         <div key={i} className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs ${i === 2 ? "bg-primary/[0.12] border border-primary/20" : ""}`}>
           <span>{badge}</span>
           <span className="text-foreground font-medium">{name}</span>
           <span className="ml-auto font-mono text-text-secondary">{pts}</span>
         </div>
       ))}
-      <p className="text-success text-xs">↑ Up 5 spots this week</p>
+      <p className="text-success text-xs">Up 5 spots this week</p>
     </div>
   );
 }
@@ -124,7 +124,7 @@ function ProfileMiniVisual() {
       <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-xs font-bold">V</div>
       <div>
         <p className="text-foreground text-sm font-medium">Vikram</p>
-        <p className="font-mono text-foreground text-xs">⚡ Score: 847</p>
+        <p className="font-mono text-foreground text-xs">Score: 847</p>
       </div>
       <div className="ml-auto flex gap-1">
         {["Verified", "3 Wins", "12 Projects"].map((b) => (

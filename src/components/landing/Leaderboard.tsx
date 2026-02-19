@@ -2,11 +2,11 @@ import { useScrollReveal } from "./useScrollReveal";
 import GlowCard from "./GlowCard";
 
 const leaderboardRows = [
-  { badge: "🥇", name: "Riya M.", dept: "Design", pts: "1,240", trend: "↑ +3", trendColor: "text-success" },
-  { badge: "🥈", name: "Arjun K.", dept: "CS", pts: "1,180", trend: "↑ +1", trendColor: "text-success" },
-  { badge: "🥉", name: "Priya S.", dept: "Management", pts: "987", trend: "→ stable", trendColor: "text-text-muted" },
-  { badge: "▶", name: "You", dept: "", pts: "847", trend: "↑ Up 5 spots", trendColor: "text-success", isYou: true },
-  { badge: "", name: "Siddharth P.", dept: "", pts: "820", trend: "↓ -2", trendColor: "text-destructive" },
+  { badge: "1", name: "Riya M.", dept: "Design", pts: "1,240", trend: "+3", trendColor: "text-success" },
+  { badge: "2", name: "Arjun K.", dept: "CS", pts: "1,180", trend: "+1", trendColor: "text-success" },
+  { badge: "3", name: "Priya S.", dept: "Management", pts: "987", trend: "stable", trendColor: "text-text-muted" },
+  { badge: "4", name: "You", dept: "", pts: "847", trend: "Up 5 spots", trendColor: "text-success", isYou: true },
+  { badge: "5", name: "Siddharth P.", dept: "", pts: "820", trend: "-2", trendColor: "text-destructive" },
 ];
 
 export default function Leaderboard() {
@@ -55,27 +55,27 @@ export default function Leaderboard() {
               ))}
             </div>
 
-            <a href="#" className="block mt-4 text-sm text-primary text-right hover:underline">View Full Leaderboard →</a>
+            <a href="#" className="block mt-4 text-sm text-primary text-right hover:underline">View Full Leaderboard</a>
           </GlowCard>
 
           {/* Score explanation */}
           <div className="space-y-6">
             <GlowCard className="p-6">
-              <h3 className="font-display font-bold text-lg text-foreground mb-4">⚡ Innovation Score</h3>
+              <h3 className="font-display font-bold text-lg text-foreground mb-4">Innovation Score</h3>
               <p className="text-sm text-text-secondary mb-3">Measures your innovation activity</p>
               <div className="space-y-2">
                 {["Quality of ideas submitted", "Challenges participated and won", "Projects starred and forked by peers", "Endorsements received"].map((item) => (
-                  <p key={item} className="text-sm text-text-secondary"><span className="text-primary mr-2">→</span>{item}</p>
+                  <p key={item} className="text-sm text-text-secondary"><span className="text-primary mr-2">•</span>{item}</p>
                 ))}
               </div>
             </GlowCard>
 
             <GlowCard className="p-6">
-              <h3 className="font-display font-bold text-lg text-foreground mb-4">🎯 Industry Readiness %</h3>
+              <h3 className="font-display font-bold text-lg text-foreground mb-4">Industry Readiness %</h3>
               <p className="text-sm text-text-secondary mb-3">Measures your real-world preparedness</p>
               <div className="space-y-2">
                 {["Skills and certifications added", "Projects completed and approved", "Challenge participation history", "Profile completeness"].map((item) => (
-                  <p key={item} className="text-sm text-text-secondary"><span className="text-success mr-2">→</span>{item}</p>
+                  <p key={item} className="text-sm text-text-secondary"><span className="text-success mr-2">•</span>{item}</p>
                 ))}
               </div>
             </GlowCard>

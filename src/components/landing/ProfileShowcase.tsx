@@ -61,7 +61,7 @@ function TimelineTab() {
           <div className="absolute -left-[29px] w-3 h-3 rounded-full bg-primary/40 border-2 border-primary" />
           <p className="text-xs text-text-muted font-mono">{e.date}</p>
           <p className={`text-sm font-medium ${e.color}`}>{e.text}</p>
-          <span className="text-[10px] text-primary font-mono">✓ Verified</span>
+          <span className="text-[10px] text-primary font-mono">Verified</span>
         </div>
       ))}
     </div>

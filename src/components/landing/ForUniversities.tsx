@@ -18,11 +18,11 @@ export default function ForUniversities() {
                 Universities and colleges can post innovation challenges, access student talent analytics, and track campus-wide innovation activity in real time. Elevate your institution's innovation ecosystem.
               </p>
               <button className="px-6 py-3 text-sm font-display font-semibold text-primary border border-primary/30 rounded-lg hover:bg-primary/10 transition-colors">
-                Get in Touch →
+                Get in Touch
               </button>
             </div>
             <div className="flex flex-wrap gap-3">
-              {["✓ Post Challenges", "✓ Evaluate Submissions", "✓ Track Campus Innovation", "✓ Industry Partner Network"].map((chip) => (
+              {["Post Challenges", "Evaluate Submissions", "Track Campus Innovation", "Industry Partner Network"].map((chip) => (
                 <span key={chip} className="px-4 py-2 rounded-lg text-sm font-body text-foreground border border-primary/20 bg-primary/[0.06]">
                   {chip}
                 </span>

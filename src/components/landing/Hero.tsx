@@ -30,9 +30,7 @@ export default function Hero() {
           variants={fadeUp}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8 bg-primary/[0.08]">
 
-          <span className="text-primary">✦</span>
           <span className="font-mono text-xs text-primary">Introducing Zentro Workmark</span>
-          <span className="text-primary">→</span>
         </motion.a>
 
         {/* Headline */}
@@ -61,13 +59,13 @@ export default function Hero() {
         {/* CTA row */}
         <motion.div variants={fadeUp} className="flex justify-center mb-6">
           <GradientButton className="px-7 py-3.5 font-display font-semibold text-[15px] rounded-[10px]">
-            Start Building Your Workmark →
+            Start Building Your Workmark
           </GradientButton>
         </motion.div>
 
         {/* Trust line */}
         <motion.p variants={fadeUp} className="font-mono text-[11px] text-text-muted mb-12">
-          ✦ Free for students · No credit card · Join 2,000+ students across 12 universities
+          Free for students · No credit card · Join 2,000+ students across 12 universities
         </motion.p>
 
         {/* Platform mockup */}

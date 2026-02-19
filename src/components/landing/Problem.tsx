@@ -61,7 +61,7 @@ export default function Problem() {
               <div className="relative">
                 <div className="absolute -left-3 top-0 bottom-0 w-px bg-primary/20" />
                 <div className="absolute -left-3 top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs">
-                  →
+                  vs
                 </div>
 
                 {/* Workmark side */}

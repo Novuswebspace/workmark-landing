@@ -49,7 +49,7 @@ export default function Navbar() {
             Log In
           </button>
           <button className="px-5 py-2.5 text-sm font-body font-semibold text-primary-foreground bg-primary rounded-lg hover:shadow-[0_0_24px_hsl(211_100%_61%/0.45)] hover:scale-[1.02] transition-all">
-            Get Started Free →
+            Get Started Free
           </button>
         </div>
 
@@ -80,7 +80,7 @@ export default function Navbar() {
               Log In
             </button>
             <button className="w-full py-3 text-sm font-body font-semibold text-primary-foreground bg-primary rounded-lg">
-              Get Started Free →
+              Get Started Free
             </button>
           </div>
         </div>

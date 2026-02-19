@@ -32,7 +32,7 @@ export default function ActivityFeed() {
                 </div>
               </div>
               <p className="text-text-secondary text-sm leading-relaxed mb-3">
-                Just completed my first full-stack project using React and Node.js 🚀 Built a real-time chat application with WebSocket integration. Sharing the repo for anyone building something similar!
+                Just completed my first full-stack project using React and Node.js. Built a real-time chat application with WebSocket integration. Sharing the repo for anyone building something similar!
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["React", "Node.js", "WebSocket", "Full-Stack"].map((t) => (
@@ -40,20 +40,20 @@ export default function ActivityFeed() {
                 ))}
               </div>
               <div className="flex gap-4 text-xs text-text-muted">
-                <span>▲ 4 upvotes</span>
-                <span>💬 3 comments</span>
-                <span>🔀 Use as Reference</span>
-                <span>🔖 Save</span>
+                <span>4 upvotes</span>
+                <span>3 comments</span>
+                <span>Use as Reference</span>
+                <span>Save</span>
               </div>
             </GlowCard>
 
             {/* Post 2 — challenge */}
             <GlowCard className="p-6 border-warning/[0.15]">
-              <p className="text-warning text-sm font-display font-bold mb-2">📢 New Challenge Posted</p>
+              <p className="text-warning text-sm font-display font-bold mb-2">New Challenge Posted</p>
               <p className="text-foreground font-medium mb-1">Smart Campus AI Solutions</p>
               <p className="text-xs text-text-muted mb-3">Deadline: 48 hours · Prize: ₹50,000 · Posted by Industry Partner</p>
               <button className="px-4 py-2 text-xs font-display font-semibold text-warning bg-warning/10 border border-warning/20 rounded-lg hover:bg-warning/20 transition-colors">
-                Submit Idea →
+                Submit Idea
               </button>
             </GlowCard>
 

@@ -42,7 +42,7 @@ function ProfileVisual() {
         </div>
       </div>
       <div className="space-y-2">
-        {[["✓ Education", true], ["✓ Interests", true], ["☐ Certifications", false], ["☐ First Challenge", false]].map(([label, done]) => (
+        {[["Education", true], ["Interests", true], ["Certifications", false], ["First Challenge", false]].map(([label, done]) => (
           <div key={label as string} className={`text-xs font-mono ${done ? "text-success" : "text-text-muted"}`}>{label as string}</div>
         ))}
       </div>
@@ -54,13 +54,13 @@ function FeedbackVisual() {
   return (
     <GlowCard className="p-5 space-y-2">
       {[
-        ["✅", "Strengths", "Strong market research, clear problem definition", "text-success"],
-        ["⚠", "Areas for Improvement", "Technical feasibility section needs work", "text-warning"],
-        ["💡", "Suggestions", "Add a prototype or PoC", "text-primary"],
-        ["⭐", "Overall Score: 82/100", "", "text-foreground"],
+        ["", "Strengths", "Strong market research, clear problem definition", "text-success"],
+        ["", "Areas for Improvement", "Technical feasibility section needs work", "text-warning"],
+        ["", "Suggestions", "Add a prototype or PoC", "text-primary"],
+        ["", "Overall Score: 82/100", "", "text-foreground"],
       ].map(([icon, title, desc, color]) => (
         <div key={title} className="px-3 py-2 rounded-lg border border-foreground/[0.06]">
-          <p className={`text-xs font-medium ${color}`}>{icon} {title}</p>
+          <p className={`text-xs font-medium ${color}`}>{title}</p>
           {desc && <p className="text-[11px] text-text-muted mt-0.5">{desc}</p>}
         </div>
       ))}
@@ -76,7 +76,7 @@ function ScoreVisual() {
       <p className="text-text-muted text-xs font-mono mt-2">Innovation Score</p>
       <div className="flex items-center justify-center gap-2 mt-3">
         <span className="text-text-muted text-xs">Rank #12</span>
-        <span className="text-success text-xs">→</span>
+        <span className="text-success text-xs">-</span>
         <span className="text-success text-xs font-bold">Rank #3</span>
       </div>
     </GlowCard>
@@ -129,8 +129,8 @@ export default function HowItWorks() {
                       </div>
                       <div className="p-3 rounded-lg border border-primary/20 bg-primary/[0.04]">
                         <p className="text-foreground text-sm font-medium mb-1">Smart Campus AI Solutions</p>
-                        <p className="text-xs text-text-muted mb-2">⏱ 48 hours · ₹50,000</p>
-                        <button className="w-full py-1.5 text-xs font-display font-semibold text-primary-foreground bg-primary rounded-lg animate-shimmer">Submit Idea →</button>
+                        <p className="text-xs text-text-muted mb-2">48 hours · ₹50,000</p>
+                        <button className="w-full py-1.5 text-xs font-display font-semibold text-primary-foreground bg-primary rounded-lg animate-shimmer">Submit Idea</button>
                       </div>
                     </GlowCard>
                   )}
