@@ -57,7 +57,7 @@ function FeedbackVisual() {
         ["✅", "Strengths", "Strong market research, clear problem definition", "text-success"],
         ["⚠", "Areas for Improvement", "Technical feasibility section needs work", "text-warning"],
         ["💡", "Suggestions", "Add a prototype or PoC", "text-primary"],
-        ["⭐", "Overall Score: 82/100", "", "text-accent"],
+        ["⭐", "Overall Score: 82/100", "", "text-foreground"],
       ].map(([icon, title, desc, color]) => (
         <div key={title} className="px-3 py-2 rounded-lg border border-foreground/[0.06]">
           <p className={`text-xs font-medium ${color}`}>{icon} {title}</p>
@@ -72,7 +72,7 @@ function ScoreVisual() {
   const { count, ref } = useCountUp(847);
   return (
     <GlowCard className="p-5 text-center">
-      <span ref={ref} className="font-mono text-5xl text-accent font-bold">{count}</span>
+      <span ref={ref} className="font-mono text-5xl text-foreground font-bold">{count}</span>
       <p className="text-text-muted text-xs font-mono mt-2">Innovation Score</p>
       <div className="flex items-center justify-center gap-2 mt-3">
         <span className="text-text-muted text-xs">Rank #12</span>

@@ -16,7 +16,7 @@ const benefits = [
     titleMain: "Ideas",
     body: "Stop wondering if your idea is good. Get structured feedback from real domain experts — specific strengths, honest gaps, and a clear path forward.",
     chip: "Expert Evaluation · Not Just Peer Votes",
-    chipColor: "text-accent border-accent/20 bg-accent/[0.06]",
+    chipColor: "text-foreground border-foreground/20 bg-foreground/[0.06]",
   },
   {
     accent: "zentro-card-accent-green",

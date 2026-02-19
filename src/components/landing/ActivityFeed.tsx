@@ -60,7 +60,7 @@ export default function ActivityFeed() {
             {/* Fade out post */}
             <div className="zentro-card p-6 opacity-30">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-accent/20" />
+                <div className="w-10 h-10 rounded-full bg-foreground/20" />
                 <div className="space-y-1">
                   <div className="h-3 w-24 rounded bg-foreground/10" />
                   <div className="h-2 w-32 rounded bg-foreground/5" />
@@ -87,7 +87,7 @@ export default function ActivityFeed() {
             <GlowCard className="p-5">
               <p className="text-foreground text-sm font-display font-bold mb-3">👁 Eyes on Your Work</p>
               <p className="text-text-secondary text-sm">IntelliCampus Project</p>
-              <p className="font-mono text-accent text-lg font-bold">49 views this week</p>
+              <p className="font-mono text-foreground text-lg font-bold">49 views this week</p>
             </GlowCard>
           </div>
         </div>

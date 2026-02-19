@@ -16,7 +16,7 @@ const bentoCards = [
     span: "md:col-span-2",
     accent: "zentro-card-accent-cyan",
     eyebrow: "CORE FEATURE 02",
-    eyebrowColor: "text-accent",
+    eyebrowColor: "text-foreground",
     title: "A Profile That Proves You.",
     body: "Not a bio. A living record — verified timeline of every challenge, project, endorsement, and achievement. Shareable with anyone, anytime.",
     visual: "profile",
@@ -25,7 +25,7 @@ const bentoCards = [
     span: "",
     accent: "zentro-card-accent-cyan",
     eyebrow: "LIVE SCORE",
-    eyebrowColor: "text-accent",
+    eyebrowColor: "text-foreground",
     title: "",
     body: "",
     visual: "score",
@@ -72,12 +72,12 @@ function ScoreVisual() {
   const { count, ref } = useCountUp(847);
   return (
     <div className="text-center py-4">
-      <span ref={ref} className="font-mono text-[56px] text-accent font-bold leading-none">{count}</span>
+      <span ref={ref} className="font-mono text-[56px] text-foreground font-bold leading-none">{count}</span>
       <p className="text-text-muted text-[11px] font-mono mt-2">Innovation Score</p>
       <p className="text-success text-[13px] mt-1">↑ +14 points this week</p>
       <div className="flex justify-center gap-1 mt-4">
         {[30, 45, 55, 70, 85].map((h, i) => (
-          <div key={i} className="w-4 rounded-sm bg-accent/30" style={{ height: `${h}%`, minHeight: `${h * 0.6}px` }} />
+          <div key={i} className="w-4 rounded-sm bg-foreground/30" style={{ height: `${h}%`, minHeight: `${h * 0.6}px` }} />
         ))}
       </div>
     </div>
@@ -124,7 +124,7 @@ function ProfileMiniVisual() {
       <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-xs font-bold">V</div>
       <div>
         <p className="text-foreground text-sm font-medium">Vikram</p>
-        <p className="font-mono text-accent text-xs">⚡ Score: 847</p>
+        <p className="font-mono text-foreground text-xs">⚡ Score: 847</p>
       </div>
       <div className="ml-auto flex gap-1">
         {["Verified", "3 Wins", "12 Projects"].map((b) => (

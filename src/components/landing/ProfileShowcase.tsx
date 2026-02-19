@@ -17,11 +17,11 @@ function ScoreTab() {
   const { count, ref } = useCountUp(847);
   return (
     <div className="text-center py-8">
-      <span ref={ref} className="font-mono text-6xl text-accent font-bold">{count}</span>
+      <span ref={ref} className="font-mono text-6xl text-foreground font-bold">{count}</span>
       <p className="text-text-muted text-sm font-mono mt-2">Rank #3 of 218 peers · +14 this week</p>
       <div className="flex justify-center gap-1.5 mt-6">
         {[20, 35, 30, 45, 50, 60, 75, 85].map((h, i) => (
-          <div key={i} className="w-6 rounded-sm bg-accent/20 transition-all" style={{ height: `${h}px` }} />
+          <div key={i} className="w-6 rounded-sm bg-foreground/20 transition-all" style={{ height: `${h}px` }} />
         ))}
       </div>
       <p className="text-[11px] text-text-ghost mt-4">Calculated from challenges entered, ideas approved, project stars, and peer endorsements.</p>
@@ -52,7 +52,7 @@ function TimelineTab() {
     { date: "Jan 2026", text: "Challenge Finalist — Smart Campus AI", color: "text-warning" },
     { date: "Dec 2025", text: "Project Approved — IntelliCampus Platform", color: "text-success" },
     { date: "Nov 2025", text: "Certified — Design Thinking Fundamentals", color: "text-primary" },
-    { date: "Oct 2025", text: "Idea Submitted — EcoTrack App", color: "text-accent" },
+    { date: "Oct 2025", text: "Idea Submitted — EcoTrack App", color: "text-foreground" },
   ];
   return (
     <div className="py-6 space-y-4 pl-6 border-l border-primary/[0.15]">
@@ -89,7 +89,7 @@ function EndorsementsTab() {
 function CertsTab() {
   const certs = [
     { name: "Design Thinking", issuer: "IDEO", color: "border-primary/20" },
-    { name: "Data Analytics", issuer: "Google", color: "border-accent/20" },
+    { name: "Data Analytics", issuer: "Google", color: "border-foreground/20" },
     { name: "Web Development", issuer: "Meta", color: "border-success/20" },
     { name: "AI Fundamentals", issuer: "IBM", color: "border-violet/20" },
     { name: "Cloud Computing", issuer: "AWS", color: "border-warning/20" },

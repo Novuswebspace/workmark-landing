@@ -82,7 +82,7 @@ export default function Problem() {
                   <div className="space-y-2">
                     <div className="flex justify-between text-xs">
                       <span className="text-text-secondary">Innovation Score</span>
-                      <span className="font-mono text-accent font-bold">847</span>
+                      <span className="font-mono text-foreground font-bold">847</span>
                     </div>
                     <div className="flex justify-between text-xs">
                       <span className="text-text-secondary">Industry Readiness</span>
