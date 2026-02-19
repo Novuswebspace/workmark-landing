@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/workmark",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/workmark/:path*",
+      "destination": "/:path*"
+    }
+  ]
+}
