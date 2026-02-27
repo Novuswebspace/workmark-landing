@@ -15,11 +15,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
           ? "bg-background/80 backdrop-blur-xl border-b border-primary/[0.08]"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
@@ -43,14 +42,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTAs */}
+        {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="px-5 py-2.5 text-sm font-body font-medium text-text-secondary border border-primary/25 rounded-lg hover:border-primary/50 hover:text-foreground transition-all">
-            Log In
-          </button>
-          <button className="px-5 py-2.5 text-sm font-body font-semibold text-primary-foreground bg-primary rounded-lg hover:shadow-[0_0_24px_hsl(211_100%_61%/0.45)] hover:scale-[1.02] transition-all">
-            Get Started Free
-          </button>
+          <a href="https://tally.so/r/mZ0jgy" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 text-sm font-body font-semibold text-primary-foreground bg-primary rounded-lg hover:shadow-[0_0_24px_hsl(211_100%_61%/0.45)] hover:scale-[1.02] transition-all">
+            Join
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -76,12 +72,9 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <button className="w-full py-3 text-sm font-body font-medium text-text-secondary border border-primary/25 rounded-lg">
-              Log In
-            </button>
-            <button className="w-full py-3 text-sm font-body font-semibold text-primary-foreground bg-primary rounded-lg">
-              Get Started Free
-            </button>
+            <a href="https://tally.so/r/mZ0jgy" target="_blank" rel="noopener noreferrer" className="w-full py-3 text-sm font-body font-semibold text-primary-foreground bg-primary rounded-lg text-center">
+              Join
+            </a>
           </div>
         </div>
       )}

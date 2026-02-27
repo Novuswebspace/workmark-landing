@@ -5,17 +5,14 @@ const testimonials = [
   {
     quote: "I used to feel invisible during placements. Now my Workmark profile shows three challenge wins, two industry evaluations, and a score that speaks before I even open my mouth. A recruiter from a Bangalore startup reached out to me through my profile — without me applying.",
     name: "Priya S.",
-    role: "MBA, 2nd Year · IIM Ahmedabad",
   },
   {
     quote: "The Innovation Score sounds like a game, but it genuinely changed how I approach every semester. I study with intent now because I know my Workmark is watching. It keeps me honest and hungry at the same time.",
     name: "Arjun K.",
-    role: "Computer Science, 3rd Year · VIT Vellore",
   },
   {
     quote: "My professor saw my Proof Timeline and recommended me for a research collaboration without me asking. A resume would never have done that. The timeline showed my entire thinking journey — not just the result.",
     name: "Riya M.",
-    role: "Product Design, Final Year · SRM Chennai",
   },
 ];
 
@@ -41,16 +38,9 @@ export default function Testimonials() {
                 <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center font-display text-primary text-xs font-bold">
                   {t.name.split(" ").map(w => w[0]).join("")}
                 </div>
-                <div>
-                  <p className="text-foreground text-sm font-medium">{t.name}</p>
-                  <p className="text-text-muted text-[13px]">{t.role}</p>
-                </div>
+                <p className="text-foreground text-sm font-medium">{t.name}</p>
               </div>
-              <div className="flex gap-0.5 mt-3">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="text-warning text-sm">★</span>
-                ))}
-              </div>
+
             </GlowCard>
           ))}
         </div>

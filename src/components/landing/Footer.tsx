@@ -1,5 +1,5 @@
 import { useTheme } from "@/hooks/useTheme";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Linkedin } from "lucide-react";
 
 export default function Footer() {
   const { theme, toggleTheme } = useTheme();
@@ -16,11 +16,9 @@ export default function Footer() {
             </div>
             <p className="font-body text-text-muted text-sm mb-4">The innovation ecosystem for every student.</p>
             <div className="flex gap-2">
-              {["Li", "X", "Ig"].map((s) => (
-                <a key={s} href="#" className="w-8 h-8 rounded-full bg-foreground/[0.06] flex items-center justify-center text-text-muted text-xs hover:bg-primary/[0.15] hover:text-primary transition-colors">
-                  {s}
-                </a>
-              ))}
+              <a href="https://www.linkedin.com/company/zentro-suite/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-foreground/[0.06] flex items-center justify-center text-text-muted hover:bg-primary/[0.15] hover:text-primary transition-colors">
+                <Linkedin size={14} />
+              </a>
             </div>
           </div>
 
@@ -43,8 +41,8 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p className="font-mono text-[10px] text-text-ghost uppercase tracking-wider mb-4">GET IN TOUCH</p>
-            <p className="text-text-muted text-sm font-body mb-3">hello@zentroworkmark.com</p>
-            <a href="#" className="text-primary text-sm font-body hover:underline">Get Started Free →</a>
+            <p className="text-text-muted text-sm font-body mb-3">corporate.zentrosuite@gmail.com</p>
+            <a href="https://tally.so/r/mZ0jgy" target="_blank" rel="noopener noreferrer" className="text-primary text-sm font-body hover:underline">Join the Waitlist →</a>
           </div>
         </div>
 

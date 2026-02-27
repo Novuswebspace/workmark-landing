@@ -28,9 +28,9 @@ export default function FinalCTA() {
           Every week you wait is a week your proof-of-work trail doesn't grow. Every challenge you skip is a story never told. Join Zentro Workmark today and start building what actually matters.
         </p>
 
-        <button className="px-9 py-4 font-display font-semibold text-base text-primary-foreground bg-primary rounded-xl hover:shadow-[0_0_40px_hsl(211_100%_61%/0.55),0_0_80px_hsl(211_100%_61%/0.20)] hover:scale-[1.03] transition-all animate-shimmer">
-          Get Your Workmark Now →
-        </button>
+        <a href="https://tally.so/r/mZ0jgy" target="_blank" rel="noopener noreferrer" className="px-9 py-4 font-display font-semibold text-base text-primary-foreground bg-primary rounded-xl hover:shadow-[0_0_40px_hsl(211_100%_61%/0.55),0_0_80px_hsl(211_100%_61%/0.20)] hover:scale-[1.03] transition-all animate-shimmer inline-block">
+          Join the Waitlist →
+        </a>
 
         <p className="font-mono text-[11px] text-text-muted mt-6">
           No credit card required · No resume needed · Just your work

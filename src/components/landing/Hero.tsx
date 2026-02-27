@@ -58,9 +58,11 @@ export default function Hero() {
 
         {/* CTA row */}
         <motion.div variants={fadeUp} className="flex justify-center mb-6">
-          <GradientButton className="px-7 py-3.5 font-display font-semibold text-[15px] rounded-[10px]">
-            Start Building Your Workmark
-          </GradientButton>
+          <a href="https://tally.so/r/mZ0jgy" target="_blank" rel="noopener noreferrer">
+            <GradientButton className="px-7 py-3.5 font-display font-semibold text-[15px] rounded-[10px]">
+              Join the Waitlist
+            </GradientButton>
+          </a>
         </motion.div>
 
         {/* Trust line */}
