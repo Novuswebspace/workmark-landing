@@ -4,14 +4,11 @@ export default function FinalCTA() {
   const ref = useScrollReveal();
 
   return (
-    <section className="relative section-padding overflow-hidden">
-      <div className="absolute inset-0 glow-intense pointer-events-none" />
-      <div className="absolute inset-0 grid-bg pointer-events-none" style={{ opacity: 0.8 }} />
-
+    <section className="relative section-padding overflow-hidden bg-background">
       <div ref={ref} className="container relative z-10 flex flex-col items-center text-center max-w-[700px] [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         {/* Badge */}
         <span
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8 font-mono text-xs text-primary bg-primary/[0.08]">
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/[0.08] mb-8 font-mono text-xs text-text-secondary bg-black/[0.02]">
 
           ✦ FREE · NO CREDIT CARD · START TODAY
         </span>
@@ -19,7 +16,7 @@ export default function FinalCTA() {
         <h2 className="font-display font-extrabold text-[48px] md:text-[76px] text-foreground leading-[1.0] mb-6">
           Start building your
           <br />
-          <span className="text-primary" style={{ textShadow: "0 0 40px hsl(211 100% 61% / 0.4)" }}>
+          <span className="text-primary">
             Workmark.
           </span>
         </h2>
@@ -28,7 +25,7 @@ export default function FinalCTA() {
           Every week you wait is a week your proof-of-work trail doesn't grow. Every challenge you skip is a story never told. Join Zentro Workmark today and start building what actually matters.
         </p>
 
-        <a href="https://tally.so/r/mZ0jgy" target="_blank" rel="noopener noreferrer" className="px-9 py-4 font-display font-semibold text-base text-primary-foreground bg-primary rounded-xl hover:shadow-[0_0_40px_hsl(211_100%_61%/0.55),0_0_80px_hsl(211_100%_61%/0.20)] hover:scale-[1.03] transition-all animate-shimmer inline-block">
+        <a href="https://tally.so/r/mZ0jgy" target="_blank" rel="noopener noreferrer" className="px-9 py-4 font-display font-semibold text-base text-primary-foreground bg-primary rounded-xl hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:scale-[1.03] transition-all animate-shimmer inline-block">
           Join the Waitlist →
         </a>
 

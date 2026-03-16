@@ -40,7 +40,7 @@ function ReadinessTab() {
       </div>
       <div className="flex flex-wrap gap-2 mt-6 justify-center">
         {["Problem Solving", "Presentation", "Project Execution", "Domain Knowledge"].map((s) => (
-          <span key={s} className="px-3 py-1 rounded-full text-xs font-mono text-success border border-success/20 bg-success/[0.06]">{s}</span>
+          <span key={s} className="px-3 py-1 rounded-full text-xs font-mono text-success border border-success/20 bg-success/[0.04]">{s}</span>
         ))}
       </div>
     </div>
@@ -55,10 +55,10 @@ function TimelineTab() {
     { date: "Oct 2025", text: "Idea Submitted — EcoTrack App", color: "text-foreground" },
   ];
   return (
-    <div className="py-6 space-y-4 pl-6 border-l border-primary/[0.15]">
+    <div className="py-6 space-y-4 pl-6 border-l border-black/10">
       {events.map((e) => (
         <div key={e.date} className="relative">
-          <div className="absolute -left-[29px] w-3 h-3 rounded-full bg-primary/40 border-2 border-primary" />
+          <div className="absolute -left-[29px] w-3 h-3 rounded-full bg-black/20 border-2 border-black/40" />
           <p className="text-xs text-text-muted font-mono">{e.date}</p>
           <p className={`text-sm font-medium ${e.color}`}>{e.text}</p>
           <span className="text-[10px] text-primary font-mono">Verified</span>
@@ -75,7 +75,7 @@ function EndorsementsTab() {
     <div className="py-6 grid grid-cols-3 gap-4">
       {people.map((p, i) => (
         <div key={p} className="text-center">
-          <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center font-display text-primary text-xs font-bold mx-auto mb-2">
+          <div className="w-12 h-12 rounded-full bg-black/[0.04] flex items-center justify-center font-display text-text-secondary text-xs font-bold mx-auto mb-2">
             {p.split(" ").map(w => w[0]).join("")}
           </div>
           <p className="text-xs text-foreground font-medium">{p}</p>
@@ -121,8 +121,8 @@ export default function ProfileShowcase() {
   const ActiveTab = tabComponents[active];
 
   return (
-    <section className="relative section-padding">
-      <div className="absolute inset-0 glow-blue pointer-events-none" style={{ backgroundPosition: "70% 50%" }} />
+    <section className="relative section-padding bg-background">
+
       <div ref={ref} className="container relative z-10 [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         <div className="text-center mb-16">
           <span className="eyebrow text-primary mb-4 block">YOUR IDENTITY</span>
@@ -147,7 +147,7 @@ export default function ProfileShowcase() {
                   onClick={() => setActive(tab.key)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap transition-all ${
                     active === tab.key
-                      ? "bg-primary/20 text-primary border border-primary/30"
+                      ? "bg-black/10 text-foreground border border-black/20"
                       : "text-text-muted hover:text-text-secondary border border-transparent"
                   }`}
                 >

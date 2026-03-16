@@ -13,8 +13,8 @@ export default function Leaderboard() {
   const ref = useScrollReveal();
 
   return (
-    <section id="leaderboard" className="relative section-padding bg-surface-1">
-      <div className="absolute inset-0 glow-amber pointer-events-none" />
+    <section id="leaderboard" className="relative section-padding bg-background">
+
       <div ref={ref} className="container relative z-10 [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         <div className="text-center mb-16">
           <span className="eyebrow text-warning mb-4 block">HEALTHY COMPETITION</span>
@@ -41,7 +41,7 @@ export default function Leaderboard() {
                 <div
                   key={i}
                   className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
-                    row.isYou ? "bg-primary/[0.10] border border-primary/20" : "hover:bg-foreground/[0.03]"
+                    row.isYou ? "bg-black/[0.04] border border-black/10 shadow-sm" : "hover:bg-black/[0.02]"
                   }`}
                 >
                   <span className="text-lg w-7">{row.badge}</span>

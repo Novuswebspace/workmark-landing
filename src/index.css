@@ -6,6 +6,65 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 220 40% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 10%;
+    --card-hover: 0 0% 100%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 10%;
+
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 220 40% 10%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 215 17% 45%;
+
+    --accent: 187 82% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 43 96% 46%;
+    --warning-foreground: 0 0% 0%;
+
+    --violet: 263 70% 60%;
+    --violet-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 211 100% 50%;
+
+    --radius: 0.75rem;
+
+    --text-primary: 220 40% 10%;
+    --text-secondary: 215 20% 40%;
+    --text-muted: 215 17% 55%;
+    --text-ghost: 215 14% 70%;
+
+    --surface-1: 0 0% 98%;
+    --surface-2: 0 0% 96%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 40% 10%;
+    --sidebar-primary: 211 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 220 40% 10%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 211 100% 50%;
+  }
+
+  .dark {
     --background: 220 40% 4%;
     --foreground: 220 60% 95%;
 
@@ -166,62 +225,7 @@
     inherits: false;
   }
 
-  .light {
-    --background: 220 20% 97%;
-    --foreground: 220 40% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 40% 10%;
-    --card-hover: 220 20% 96%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 10%;
-
-    --primary: 211 100% 50%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 20% 92%;
-    --secondary-foreground: 220 40% 10%;
-
-    --muted: 220 15% 92%;
-    --muted-foreground: 215 17% 45%;
-
-    --accent: 187 82% 40%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84% 55%;
-    --destructive-foreground: 0 0% 100%;
-
-    --success: 160 60% 40%;
-    --success-foreground: 0 0% 100%;
-
-    --warning: 43 96% 46%;
-    --warning-foreground: 0 0% 0%;
-
-    --violet: 263 70% 60%;
-    --violet-foreground: 0 0% 100%;
-
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 211 100% 50%;
-
-    --text-primary: 220 40% 10%;
-    --text-secondary: 215 20% 40%;
-    --text-muted: 215 17% 55%;
-    --text-ghost: 215 14% 70%;
-
-    --surface-1: 220 20% 95%;
-    --surface-2: 220 15% 92%;
-
-    --sidebar-background: 220 20% 97%;
-    --sidebar-foreground: 220 40% 10%;
-    --sidebar-primary: 211 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 20% 92%;
-    --sidebar-accent-foreground: 220 40% 10%;
-    --sidebar-border: 220 20% 88%;
-    --sidebar-ring: 211 100% 50%;
-  }
 }
 
 @layer base {
@@ -298,8 +302,8 @@
   }
 
   .zentro-card:hover {
-    border-color: hsl(var(--primary) / 0.38);
-    box-shadow: 0 20px 60px hsl(var(--primary) / 0.10);
+    border-color: hsl(var(--primary) / 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
     transform: translateY(-4px);
   }
 
@@ -348,15 +352,15 @@
   }
 
   .glow-intense {
-    background: radial-gradient(ellipse 1000px 800px at 50% 50%, hsl(var(--primary) / 0.20), transparent 60%),
-                radial-gradient(ellipse 1400px 1000px at 50% 50%, hsl(var(--accent) / 0.07), transparent 60%);
+    background: radial-gradient(ellipse 1000px 800px at 50% 50%, rgba(0, 0, 0, 0.03), transparent 60%),
+                radial-gradient(ellipse 1400px 1000px at 50% 50%, rgba(0, 0, 0, 0.01), transparent 60%);
   }
 
   /* Light mode: tone down atmospheric effects */
-  .light .glow-blue,
-  .light .glow-cyan,
-  .light .glow-red,
-  .light .glow-amber {
+  .dark .glow-blue,
+  .dark .glow-cyan,
+  .dark .glow-red,
+  .dark .glow-amber {
     opacity: 0.5;
   }
 
@@ -368,7 +372,13 @@
     opacity: 0.015;
   }
 
-  .light .grid-bg {
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+  }
+
+  .dark .grid-bg {
     background-image:
       linear-gradient(hsl(var(--primary) / 0.04) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--primary) / 0.04) 1px, transparent 1px);

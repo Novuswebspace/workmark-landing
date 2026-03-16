@@ -59,8 +59,8 @@ export default function Problem() {
 
               {/* Divider */}
               <div className="relative">
-                <div className="absolute -left-3 top-0 bottom-0 w-px bg-primary/20" />
-                <div className="absolute -left-3 top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs">
+                <div className="absolute -left-3 top-0 bottom-0 w-px bg-black/5" />
+                <div className="absolute -left-3 top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-black/5 flex items-center justify-center text-text-secondary text-xs">
                   vs
                 </div>
 
@@ -73,7 +73,7 @@ export default function Problem() {
                     <span className="text-xs text-primary font-mono">Verified</span>
                   </div>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/20" />
+                    <div className="w-10 h-10 rounded-full bg-black/[0.04]" />
                     <div>
                       <div className="text-sm font-medium text-foreground">Student Name</div>
                       <div className="text-xs text-text-secondary">CS, VIT Vellore</div>
@@ -95,7 +95,7 @@ export default function Problem() {
                       {["Finalist", "3 Challenges", "12 Projects"].map((t) => (
                         <span
                           key={t}
-                          className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20"
+                          className="text-[10px] px-2 py-0.5 rounded-full bg-black/[0.04] text-text-secondary border border-black/10"
                         >
                           {t}
                         </span>

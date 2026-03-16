@@ -107,7 +107,7 @@ function LeaderboardMiniVisual() {
   return (
     <div className="space-y-2 mt-2">
       {[["1", "Riya M.", "1,240"], ["2", "Arjun K.", "1,180"], ["4", "You", "847"]].map(([badge, name, pts], i) => (
-        <div key={i} className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs ${i === 2 ? "bg-primary/[0.12] border border-primary/20" : ""}`}>
+        <div key={i} className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs ${i === 2 ? "bg-black/[0.04] border border-black/10" : ""}`}>
           <span>{badge}</span>
           <span className="text-foreground font-medium">{name}</span>
           <span className="ml-auto font-mono text-text-secondary">{pts}</span>
@@ -153,8 +153,8 @@ export default function BentoGrid() {
   const ref = useScrollReveal();
 
   return (
-    <section id="features" className="relative section-padding">
-      <div className="absolute inset-0 glow-cyan pointer-events-none" />
+    <section id="features" className="relative section-padding bg-background">
+
       <div ref={ref} className="container relative z-10 [&:not(.revealed)]:opacity-0 [&.revealed]:animate-[fade-in_0.5s_ease-out_forwards]">
         <div className="text-center mb-16">
           <span className="eyebrow text-primary mb-4 block">EVERYTHING YOU GET</span>
@@ -182,7 +182,7 @@ export default function BentoGrid() {
               {card.visual === "ai" && (
                 <div className="mt-3">
                   <span className="text-violet text-[28px]">✦</span>
-                  <div className="mt-3 px-3 py-2 rounded-lg border border-violet/20 bg-violet/[0.06] text-xs text-text-secondary">
+                  <div className="mt-3 px-3 py-2 rounded-lg border border-black/10 bg-black/[0.02] text-xs text-text-secondary">
                     Next Action: Complete profile +10% Readiness
                   </div>
                 </div>

@@ -13,11 +13,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden">
-      {/* Glow orbs */}
-      <div className="absolute inset-0 glow-blue pointer-events-none" />
-      <div className="absolute inset-0 glow-cyan pointer-events-none" />
-
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden bg-background">
       <motion.div
         className="container relative z-10 flex flex-col items-center text-center max-w-[860px]"
         variants={stagger}
@@ -28,9 +24,9 @@ export default function Hero() {
         <motion.a
           href="#features"
           variants={fadeUp}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/[0.28] mb-8 bg-primary/[0.08]">
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/[0.08] mb-8 bg-black/[0.02]">
 
-          <span className="font-mono text-xs text-primary">Introducing Zentro Workmark</span>
+          <span className="font-mono text-xs text-text-secondary">Introducing Zentro Workmark</span>
         </motion.a>
 
         {/* Headline */}
@@ -75,7 +71,7 @@ export default function Hero() {
           variants={fadeUp}
           className="relative w-full max-w-[1100px]">
 
-          <div className="relative rounded-xl border border-primary/15 overflow-hidden shadow-[0_40px_120px_hsl(213_100%_62%/0.15)]">
+          <div className="relative rounded-xl border border-black/10 overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.1)]">
             {/* Browser chrome */}
             <div className="bg-secondary/80 px-4 py-2.5 flex items-center gap-2 border-b border-primary/10">
               <div className="flex gap-1.5">

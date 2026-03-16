@@ -13,7 +13,7 @@ import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
-    <div className="grain-overlay grid-bg min-h-screen bg-background">
+    <div className="grain-overlay min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
       <SocialProof />

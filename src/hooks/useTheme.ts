@@ -3,17 +3,17 @@ import { useState, useEffect } from "react";
 export function useTheme() {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("zentro-theme") as "dark" | "light") || "dark";
+      return (localStorage.getItem("zentro-theme") as "dark" | "light") || "light";
     }
-    return "dark";
+    return "light";
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "light") {
-      root.classList.add("light");
+    if (theme === "dark") {
+      root.classList.add("dark");
     } else {
-      root.classList.remove("light");
+      root.classList.remove("dark");
     }
     localStorage.setItem("zentro-theme", theme);
   }, [theme]);

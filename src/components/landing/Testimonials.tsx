@@ -35,7 +35,7 @@ export default function Testimonials() {
               <span className="font-display text-[72px] leading-none text-primary/[0.15] block mb-2">"</span>
               <p className="font-body font-light italic text-text-secondary text-[17px] leading-[1.8] mb-6">{t.quote}</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center font-display text-primary text-xs font-bold">
+                <div className="w-10 h-10 rounded-full bg-black/[0.04] flex items-center justify-center font-display text-text-secondary text-xs font-bold">
                   {t.name.split(" ").map(w => w[0]).join("")}
                 </div>
                 <p className="text-foreground text-sm font-medium">{t.name}</p>

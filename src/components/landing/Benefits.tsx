@@ -8,7 +8,7 @@ const benefits = [
     titleMain: "Career",
     body: "Proof-of-Work beats a resume every time. Your Workmark shows recruiters verified evidence of what you've actually done — not just what you claim.",
     chip: "Proof-of-Work > Any Resume",
-    chipColor: "text-primary border-primary/20 bg-primary/[0.06]",
+    chipColor: "text-text-secondary border-black/10 bg-black/[0.04]",
   },
   {
     accent: "zentro-card-accent-cyan",

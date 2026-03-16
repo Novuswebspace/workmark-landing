@@ -25,7 +25,7 @@ export default function ActivityFeed() {
             {/* Post 1 */}
             <GlowCard className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-xs font-bold">V</div>
+                <div className="w-10 h-10 rounded-full bg-black/[0.04] flex items-center justify-center font-display text-text-secondary text-xs font-bold">V</div>
                 <div>
                   <p className="text-foreground text-sm font-medium">Vikram</p>
                   <p className="text-text-muted text-xs">Computer Science · 4th Year · 2h ago</p>
@@ -36,7 +36,7 @@ export default function ActivityFeed() {
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["React", "Node.js", "WebSocket", "Full-Stack"].map((t) => (
-                  <span key={t} className="px-2 py-0.5 rounded text-[10px] font-mono text-primary border border-primary/20">{t}</span>
+                  <span key={t} className="px-2 py-0.5 rounded text-[10px] font-mono text-text-secondary border border-black/10">{t}</span>
                 ))}
               </div>
               <div className="flex gap-4 text-xs text-text-muted">
